@@ -6,5 +6,6 @@ class ModoReloj(ABC):
     def mostrar_mensaje(self, mensaje:str, tipoMensaje:str):
         pass
 
-    def obtenerMedida(self, nombreMedida:str):
+    @abstractmethod
+    def obtener_medida(self, nombre_medida:str, reloj):
         pass

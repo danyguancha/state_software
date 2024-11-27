@@ -11,21 +11,21 @@ if __name__ == '__main__':
     print("---EN MODO NORMAL---")
     celular.llamada_entrante()
     celular.alarma()
-    #celular.mostrar_medidas()
+    celular.mostrar_medidas()
     print()
 
     print("---EN MODO EJERCICIO---")
     reloj.cambiar_modo(Modo.EJERCICIO)
     celular.llamada_entrante()
     celular.alarma()
-    #celular.mostrar_medidas()
+    celular.mostrar_medidas()
     print()
 
     print("---EN MODO REPOSO---")
     reloj.cambiar_modo(Modo.REPOSO)
     celular.llamada_entrante()
     celular.alarma()
-    #celular.mostrar_medidas()
+    celular.mostrar_medidas()
     print()
 
 

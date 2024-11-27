@@ -1,7 +1,5 @@
 from enum import Enum
 
-from excepciones import RelojException
-from modoReloj import ModoReloj
 from normal import Normal
 from ejercicio import Ejercicio
 from reposo import Reposo
@@ -28,7 +26,6 @@ class Reloj:
             Modo.REPOSO: Reposo()
         }
         self.modo_actual = self.modos[Modo.NORMAL]
-        
 
     def mostrar_mensaje(self, mensaje:str, tipo_mensaje:str):
         """
@@ -37,12 +34,15 @@ class Reloj:
         """
         self.modo_actual.mostrar_mensaje(mensaje, tipo_mensaje)
         
-    
+     
+
 
     def cambiar_modo(self, nuevo_modo:Modo):
         self.modo = self.modos[nuevo_modo]
 
-   
+    def obtener_medida(self, nombre_medida:str) -> float:
+
+        return self.modo_actual.obtener_medida(nombre_medida, self)
 
     def adicionar_medida(self, nombre_medida:str, valor:float):
         self.medidas[nombre_medida] = valor
